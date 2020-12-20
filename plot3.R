@@ -10,7 +10,6 @@ library(lubridate)
   png(filename = "plot3.png", width = 480, height = 480, units = "px")
 
 ##convert Date and Time  using lubridate package
- #Sys.setlocale("LC_TIME", "German")
   Sys.setlocale("LC_TIME", "US")
   data$Time <- dmy_hms(paste(data$Date, data$Time))
 
@@ -18,13 +17,11 @@ library(lubridate)
   data$Date <- dmy(data$Date)
   data <- filter(data, Date == "2007-02-01" | Date == "2007-02-02")
   
-##plot 
+##creating plot3
   plot(data$Sub_metering_1 ~ data$Time, type = "l", 
        xlab = "", ylab = "Energy sub metering")
-  #par(new = TRUE)
   lines(data$Sub_metering_2 ~ data$Time, type = "l", 
        xlab = "", ylab = "Energy sub metering", col = "red")
-  #par(new = TRUE)
   lines(data$Sub_metering_3 ~ data$Time, type = "l", 
        xlab = "", ylab = "Energy sub metering", col= "blue")
   #add legend
