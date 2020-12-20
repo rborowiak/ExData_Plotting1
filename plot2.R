@@ -10,10 +10,7 @@ library(lubridate)
   png(filename = "plot2.png", width = 480, height = 480, units = "px")
   
 ##convert Date and Time  using lubridate package
-  #Sys.setlocale("LC_TIME", "German")
   Sys.setlocale("LC_TIME", "US")
-  #curr_locale <- Sys.getlocale("LC_TIME")
-  #Sys.setlocale("LC_TIME", curr_locale)
   data$Time <- dmy_hms(paste(data$Date, data$Time))
   
 ##using data from dates 2007-02-01 (thursday) and 2007-02-01 (friday)
