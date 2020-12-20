@@ -21,7 +21,7 @@ library(lubridate)
   par(mfcol=c(2,2))
   #plot Global Active Power
    plot(data$Global_active_power ~ data$Time, type = "l", 
-     xlab = "", ylab = "Global Active Power (kilowatts)")
+     xlab = "", ylab = "Global Active Power")
   #plot Energy sub metering
    plot(data$Sub_metering_1 ~ data$Time, type = "l", 
      xlab = "", ylab = "Energy sub metering")
